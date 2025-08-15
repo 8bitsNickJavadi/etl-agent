@@ -14,9 +14,9 @@ This project demonstrates **LangGraph Pattern #5: Fan-out concurrency + Join** b
 
 ```mermaid
 flowchart TD
-    A[load_node<br/>Read JSONL] --> B[clean_node<br/>Strip + sanitize]
-    B --> C[fan_out_enrich<br/>LLM enrich (parallel)]
-    C --> D[save_node<br/>Write to outputs/]
+    A[load_node: Read JSONL] --> B[clean_node: Clean data]
+    B --> C[fan_out_enrich: LLM enrichment]
+    C --> D[save_node: Save results]
 ```
 
 ## 📁 Project Structure
